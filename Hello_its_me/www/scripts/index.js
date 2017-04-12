@@ -15,7 +15,7 @@
         document.getElementById("ButtPress").onclick = function () {
             
             var onSuccess = function (position) {
-                var posLat = -25.7503767;
+                var posLat = position.coords.latitude;
                 if (position.coords.latitude == posLat)
                 {
                     alert('You have arrived');
