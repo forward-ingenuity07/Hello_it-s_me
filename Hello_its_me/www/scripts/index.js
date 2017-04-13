@@ -102,25 +102,38 @@
                 Lat = ((Math.round((position.coords.latitude * Math.pow(10, 4)).toFixed(1)) / Math.pow(10, 4)).toFixed(4)) * 1;
                 t1=Lat;
                 t2 = Lon;
-                true1 = 0;
+                /*true1 = 0;
                 true2 = 0;
-                for(i=0;i<=1;i++)   //Wanted to use a for loop to add and subtract tolerances
+                for(i=0;i<=1;i=i++)   //Wanted to use a for loop to add and subtract tolerances
                 {
-                    t1 = t1 + 0.001;
+                    t1 = t1 + i;
                     if(t1==posLat)
                     {
                         true1 = 1;
 
                     }
-                    t2 = t2 + 0.001;
+                    t2 = t2 + i;
                     if(t2==posLon)
                     {
                         true2 = 1;
                     }
 
                 }
+                for (j = 0.001; i <= 0.002; i = i + 0.001)   //Wanted to use a for loop to add and subtract tolerances
+                {
+                    t1 = t1 - i;
+                    if (t1 == posLat) {
+                        true1 = 1;
+
+                    }
+                    t2 = t2 + i;
+                    if (t2 == posLon) {
+                        true2 = 1;
+                    }
+
+                }
                 //||
-                //
+                //*/
                 if ((Lat == posLat || Lat == posLat + 0.001 || Lat == posLat + 0.002 || Lat == posLat - 0.001 || Lat == posLat - 0.002) && (Lon == posLon || Lon == posLon+0.001 || Lon == posLon+0.002 || Lon == posLon-0.001 || Lon == posLon-0.002)) 
                 {
                     alert('You are in your room');
