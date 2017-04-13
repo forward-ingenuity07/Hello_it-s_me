@@ -86,6 +86,56 @@
 
         };
 
+        //Where am I
+        document.getElementById("Posi").onclick = function () {
+
+            var onSuccess = function (position) {
+                var posLat = -25.702;
+                var posLon = 28.2379;
+                var Lat;
+                var Lon;
+                var t1;
+
+                Lon = ((Math.round((position.coords.longitude * Math.pow(10, 4)).toFixed(1)) / Math.pow(10, 4)).toFixed(4)) * 1;
+                Lat = ((Math.round((position.coords.latitude * Math.pow(10, 4)).toFixed(1)) / Math.pow(10, 4)).toFixed(4)) * 1;
+                t1=Lat;
+                t2=Lon
+                /*for(i=0.001;i<=0.002;i=i+0.001)   //Wanted to use a for loop to add and subtract tolerances
+                {
+                    
+
+                }*/
+                if ((Lat == posLat || Lat == posLat+0.001 || Lat == posLat+0.002 || Lat == posLat-0.001 || Lat == posLat-0.002) && (Lon==posLon|| Lon == posLon+0.001 || Lon == posLon+0.002 || Lon == posLon-0.001 || Lon == posLon-0.002)) {
+                    alert('You are in your room');
+
+                }
+                //else if()
+                //alert(Latsi);
+                /*alert('Latitude: ' + position.coords.latitude + '\n' +
+                      'Longitude: ' + position.coords.longitude + '\n' +
+                      'Altitude: ' + position.coords.altitude + '\n' +
+                      'Accuracy: ' + position.coords.accuracy + '\n' +
+                      'Altitude Accuracy: ' + position.coords.altitudeAccuracy + '\n' +
+                      'Heading: ' + position.coords.heading + '\n' +
+                      'Speed: ' + position.coords.speed + '\n' +
+                      'Timestamp: ' + position.timestamp + '\n');*/
+            };
+
+            // onError Callback receives a PositionError object
+            //
+            function onError(error) {
+                alert('code: ' + error.code + '\n' +
+                      'message: ' + error.message + '\n');
+            }
+
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+
+
+
+        };
+
+
 
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
         var parentElement = document.getElementById('deviceready');
