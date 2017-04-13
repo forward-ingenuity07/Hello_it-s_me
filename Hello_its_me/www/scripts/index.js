@@ -54,7 +54,7 @@
             var onSuccess = function (position) {
                 //var posLat = -25.750;
                 var Longit;
-                Longit = ((Math.round((position.coords.latitude * Math.pow(10, 4)).toFixed(1)) / Math.pow(10, 4)).toFixed(4)) * 1;
+                Longit = ((Math.round((position.coords.longitude * Math.pow(10, 4)).toFixed(1)) / Math.pow(10, 4)).toFixed(4)) * 1;
                 /*if (testing == posLat)
                 {
                     alert('You have arrived');
