@@ -22,7 +22,7 @@
                     alert('You have arrived');
 
                 }*/
-                testing = ((Math.round((16.18578 * Math.pow(10, 2)).toFixed(1)) / Math.pow(10, 2)).toFixed(3))*1;
+                testing = ((Math.round((16.18578 * Math.pow(10, 3)).toFixed(1)) / Math.pow(10, 3)).toFixed(3))*1;
                 alert(testing);
                 /*alert('Latitude: ' + position.coords.latitude + '\n' +
                       'Longitude: ' + position.coords.longitude + '\n' +
