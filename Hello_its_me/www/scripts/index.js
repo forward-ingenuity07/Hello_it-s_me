@@ -15,12 +15,15 @@
         document.getElementById("ButtPress").onclick = function () {
             
             var onSuccess = function (position) {
-                var posLat = position.coords.latitude;
-                if (position.coords.latitude == posLat)
+                var posLat = -25.750;
+                var testing;
+                /*if (position.coords.latitude == posLat)
                 {
                     alert('You have arrived');
 
-                }
+                }*/
+                testing = (Math.round((16.185 * Math.pow(10, 2)).toFixed(1)) / Math.pow(10, 2)).toFixed(2);
+                alert(testing);
                 /*alert('Latitude: ' + position.coords.latitude + '\n' +
                       'Longitude: ' + position.coords.longitude + '\n' +
                       'Altitude: ' + position.coords.altitude + '\n' +
