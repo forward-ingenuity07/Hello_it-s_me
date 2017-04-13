@@ -100,7 +100,7 @@
                 var true2;
                 Lon = ((Math.round((position.coords.longitude * Math.pow(10, 4)).toFixed(1)) / Math.pow(10, 4)).toFixed(4)) * 1;
                 Lat = ((Math.round((position.coords.latitude * Math.pow(10, 4)).toFixed(1)) / Math.pow(10, 4)).toFixed(4)) * 1;
-                t1=Lat;
+                t1 = Lat;
                 t2 = Lon;
                 true1 = 0;
                 true2 = 0;
@@ -138,7 +138,7 @@
                 }
                 //||
                 //
-                if(true1==1 && true2==1) 
+                if((true1=='1') && (true2=='1')) 
                 {
                     alert('You are in your room');
 
