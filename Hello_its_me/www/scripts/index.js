@@ -90,7 +90,7 @@
         document.getElementById("posi").onclick = function () {
 
             var onSuccess = function (position) {
-                var posLat = -25.702*1;
+                var posLat = -25.7502*1;
                 var posLon = 28.2379*1;
                 var Lat;
                 var Lon;
