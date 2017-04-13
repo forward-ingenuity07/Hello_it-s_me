@@ -150,7 +150,7 @@
                }
 
                else if ((Lat == LibLat || Lat == LibLat + 0.001 || Lat == LibLat - 0.001) && (Lon == LibLon || Lon == LibLon + 0.001 || Lon == LibLon - 0.001)) {
-                   alert('You are in the Library study centre');
+                   alert('You are in the Study centre');
 
                }
                 else

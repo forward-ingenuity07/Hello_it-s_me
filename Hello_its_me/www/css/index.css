@@ -73,7 +73,11 @@ h1 {
     background-color:#333333;
     display:block;
 }
+h1
+{
+    color:white;
 
+}
 .event.received {
     background-color:#4B946A;
     display:none;
