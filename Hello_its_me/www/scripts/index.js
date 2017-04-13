@@ -17,12 +17,13 @@
             var onSuccess = function (position) {
                 var posLat = -25.750;
                 var testing;
-                /*if (position.coords.latitude == posLat)
+                testing = ((Math.round((position.coords.latitude * Math.pow(10, 3)).toFixed(1)) / Math.pow(10, 3)).toFixed(3)) * 1;
+                if (testing == posLat)
                 {
                     alert('You have arrived');
 
-                }*/
-                testing = ((Math.round((16.18578 * Math.pow(10, 3)).toFixed(1)) / Math.pow(10, 3)).toFixed(3))*1;
+                }
+                
                 alert(testing);
                 /*alert('Latitude: ' + position.coords.latitude + '\n' +
                       'Longitude: ' + position.coords.longitude + '\n' +
