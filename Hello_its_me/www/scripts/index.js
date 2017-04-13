@@ -87,7 +87,7 @@
         };
 
         //Where am I
-        document.getElementById("Posi").onclick = function () {
+        document.getElementById("posi").onclick = function () {
 
             var onSuccess = function (position) {
                 var posLat = -25.702;
