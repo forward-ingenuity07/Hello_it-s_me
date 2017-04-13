@@ -95,7 +95,7 @@
                 var Lat;
                 var Lon;
                 var t1;
-
+                var t2;
                 Lon = ((Math.round((position.coords.longitude * Math.pow(10, 4)).toFixed(1)) / Math.pow(10, 4)).toFixed(4)) * 1;
                 Lat = ((Math.round((position.coords.latitude * Math.pow(10, 4)).toFixed(1)) / Math.pow(10, 4)).toFixed(4)) * 1;
                 t1=Lat;
@@ -105,7 +105,9 @@
                     
 
                 }*/
-                if ((Lat == posLat || Lat == posLat+0.001 || Lat == posLat+0.002 || Lat == posLat-0.001 || Lat == posLat-0.002) && (Lon==posLon|| Lon == posLon+0.001 || Lon == posLon+0.002 || Lon == posLon-0.001 || Lon == posLon-0.002)) {
+                //|| Lon == posLon+0.001 || Lon == posLon+0.002 || Lon == posLon-0.001 || Lon == posLon-0.002
+                //|| Lat == posLat+0.001 || Lat == posLat+0.002 || Lat == posLat-0.001 || Lat == posLat-0.002
+                if ((Lat == posLat ) && (Lon==posLon )) {
                     alert('You are in your room');
 
                 }
