@@ -18,8 +18,8 @@
                 var posLat = -25.750;
                 var testing;
                 testing = ((Math.round((position.coords.latitude * Math.pow(10, 4)).toFixed(1)) / Math.pow(10, 4)).toFixed(4)) * 1;
-                if (testing == posLat)
-                /*{
+                /*if (testing == posLat)
+                {
                     alert('You have arrived');
 
                 }*/
