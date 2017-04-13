@@ -15,10 +15,10 @@
         document.getElementById("Latti").onclick = function () {
             
             var onSuccess = function (position) {
-                var posLat = -25.750;
+                var HomLat = -25.750;
                 var Latsi;
                 Latsi = ((Math.round((position.coords.latitude * Math.pow(10, 4)).toFixed(1)) / Math.pow(10, 4)).toFixed(4)) * 1;
-                /*if (testing == posLat)
+                /*if (testing == HomLat)
                 {
                     alert('You have arrived');
 
@@ -52,10 +52,10 @@
         document.getElementById("Longi").onclick = function () {
 
             var onSuccess = function (position) {
-                //var posLat = -25.750;
+                //var HomLat = -25.750;
                 var Longit;
                 Longit = ((Math.round((position.coords.longitude * Math.pow(10, 4)).toFixed(1)) / Math.pow(10, 4)).toFixed(4)) * 1;
-                /*if (testing == posLat)
+                /*if (testing == HomLat)
                 {
                     alert('You have arrived');
 
@@ -90,8 +90,12 @@
         document.getElementById("posi").onclick = function () {
 
             var onSuccess = function (position) {
-                var posLat = -25.7502*1;
-                var posLon = 28.2379*1;
+                var HomLat = -25.7502*1;
+                var HomLon = 28.2379 * 1;
+                var LabLat = -25.7546*1;
+                var LabLon = 28.2281 * 1;
+                var LibLat = -25.7554 * 1;
+                var LibLon = 28.2305 * 1;
                 var Lat;
                 var Lon;
                 var t1;
@@ -107,13 +111,13 @@
                 for(i=0;i<=1;i=i++)   //Wanted to use a for loop to add and subtract tolerances
                 {
                     t1 = t1 + i;
-                    if(t1==posLat)
+                    if(t1==HomLat)
                     {
                         true1 = 1;
 
                     }
                     t2 = t2 + i;
-                    if(t2==posLon)
+                    if(t2==HomLon)
                     {
                         true2 = 1;
                     }
@@ -122,23 +126,33 @@
                 for (j = 0.001; i <= 0.002; i = i + 0.001)   //Wanted to use a for loop to add and subtract tolerances
                 {
                     t1 = t1 - i;
-                    if (t1 == posLat) {
+                    if (t1 == HomLat) {
                         true1 = 1;
 
                     }
                     t2 = t2 + i;
-                    if (t2 == posLon) {
+                    if (t2 == HomLon) {
                         true2 = 1;
                     }
 
                 }
                 //||
                 //*/
-                if ((Lat == posLat || Lat == posLat + 0.001 || Lat == posLat + 0.002 || Lat == posLat - 0.001 || Lat == posLat - 0.002) && (Lon == posLon || Lon == posLon+0.001 || Lon == posLon+0.002 || Lon == posLon-0.001 || Lon == posLon-0.002)) 
+                if ((Lat == HomLat || Lat == HomLat + 0.001 || Lat == HomLat + 0.002 || Lat == HomLat - 0.001 || Lat == HomLat - 0.002) && (Lon == HomLon || Lon == HomLon+0.001 || Lon == HomLon+0.002 || Lon == HomLon-0.001 || Lon == HomLon-0.002)) 
                 {
                     alert('You are in your room');
 
                 }
+
+               else if ((Lat == LabLat || Lat == LabLat + 0.001 || Lat == LabLat - 0.001) && (Lon == LabLon || Lon == LabLon + 0.001 || Lon == LabLon - 0.001)) {
+                    alert('You are in the ENG-3 Labs(A-B-C)');
+
+               }
+
+               else if ((Lat == LabLat || Lat == LabLat + 0.001 || Lat == LabLat - 0.001) && (Lon == LibLon || Lon == LibLon + 0.001 || Lon == LibLon - 0.001)) {
+                   alert('You are in the Library study centre');
+
+               }
                 else
                 {
                     alert('Position not recognised');
