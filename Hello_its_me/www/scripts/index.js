@@ -105,10 +105,16 @@
                     
 
                 }*/
-                //|| Lon == posLon+0.001 || Lon == posLon+0.002 || Lon == posLon-0.001 || Lon == posLon-0.002
-                //|| Lat == posLat+0.001 || Lat == posLat+0.002 || Lat == posLat-0.001 || Lat == posLat-0.002
-                if ((Lat == posLat ) && (Lon==posLon )) {
+                //||
+                //
+                if ((Lat == posLat || Lat == posLat + 0.001 || Lat == posLat + 0.002 || Lat == posLat - 0.001 || Lat == posLat - 0.002) && (Lon == posLon || Lon == posLon+0.001 || Lon == posLon+0.002 || Lon == posLon-0.001 || Lon == posLon-0.002)) 
+                {
                     alert('You are in your room');
+
+                }
+                else
+                {
+                    alert('Position not recognised');
 
                 }
                 //else if()
