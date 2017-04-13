@@ -12,19 +12,19 @@
         document.addEventListener( 'pause', onPause.bind( this ), false );
         document.addEventListener('resume', onResume.bind(this), false);
 
-        document.getElementById("ButtPress").onclick = function () {
+        document.getElementById("Latti").onclick = function () {
             
             var onSuccess = function (position) {
                 var posLat = -25.750;
-                var testing;
-                testing = ((Math.round((position.coords.latitude * Math.pow(10, 4)).toFixed(1)) / Math.pow(10, 4)).toFixed(4)) * 1;
+                var Latsi;
+                Latsi = ((Math.round((position.coords.latitude * Math.pow(10, 4)).toFixed(1)) / Math.pow(10, 4)).toFixed(4)) * 1;
                 /*if (testing == posLat)
                 {
                     alert('You have arrived');
 
                 }*/
                 
-                alert(testing);
+                alert(Latsi);
                 /*alert('Latitude: ' + position.coords.latitude + '\n' +
                       'Longitude: ' + position.coords.longitude + '\n' +
                       'Altitude: ' + position.coords.altitude + '\n' +
@@ -48,6 +48,45 @@
 
 
         };
+        //Longitude
+        document.getElementById("Longi").onclick = function () {
+
+            var onSuccess = function (position) {
+                //var posLat = -25.750;
+                var Longit;
+                Longit = ((Math.round((position.coords.latitude * Math.pow(10, 4)).toFixed(1)) / Math.pow(10, 4)).toFixed(4)) * 1;
+                /*if (testing == posLat)
+                {
+                    alert('You have arrived');
+
+                }*/
+
+                alert(Longit);
+                /*alert('Latitude: ' + position.coords.latitude + '\n' +
+                      'Longitude: ' + position.coords.longitude + '\n' +
+                      'Altitude: ' + position.coords.altitude + '\n' +
+                      'Accuracy: ' + position.coords.accuracy + '\n' +
+                      'Altitude Accuracy: ' + position.coords.altitudeAccuracy + '\n' +
+                      'Heading: ' + position.coords.heading + '\n' +
+                      'Speed: ' + position.coords.speed + '\n' +
+                      'Timestamp: ' + position.timestamp + '\n');*/
+            };
+
+            // onError Callback receives a PositionError object
+            //
+            function onError(error) {
+                alert('code: ' + error.code + '\n' +
+                      'message: ' + error.message + '\n');
+            }
+
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+
+
+
+        };
+
+
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
         var parentElement = document.getElementById('deviceready');
         var listeningElement = parentElement.querySelector('.listening');
