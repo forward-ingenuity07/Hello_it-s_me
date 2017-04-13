@@ -99,7 +99,7 @@
                 Lon = ((Math.round((position.coords.longitude * Math.pow(10, 4)).toFixed(1)) / Math.pow(10, 4)).toFixed(4)) * 1;
                 Lat = ((Math.round((position.coords.latitude * Math.pow(10, 4)).toFixed(1)) / Math.pow(10, 4)).toFixed(4)) * 1;
                 t1=Lat;
-                t2=Lon
+                t2 = Lon;
                 /*for(i=0.001;i<=0.002;i=i+0.001)   //Wanted to use a for loop to add and subtract tolerances
                 {
                     
