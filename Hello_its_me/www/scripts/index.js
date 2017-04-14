@@ -108,7 +108,9 @@
                 Lat = ((Math.round((position.coords.latitude * Math.pow(10, 4)).toFixed(1)) / Math.pow(10, 4)).toFixed(4)) * 1;
                 t1=Lat;
                 t2 = Lon;
+    
                 
+
                 if ((Lat == HomLat || Lat == HomLat + 0.001 || Lat == HomLat + 0.002 || Lat == HomLat - 0.001 || Lat == HomLat - 0.002) && (Lon == HomLon || Lon == HomLon+0.001 || Lon == HomLon+0.002 || Lon == HomLon-0.001 || Lon == HomLon-0.002)) 
                 {
                     alert('You are in your room');
@@ -153,14 +155,9 @@
                       'message: ' + error.message + '\n');
             }
 
+
             navigator.geolocation.getCurrentPosition(onSuccess, onError);
-
-
-
-
         };
-
-
 
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
         var parentElement = document.getElementById('deviceready');
