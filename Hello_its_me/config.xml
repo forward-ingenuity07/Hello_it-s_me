@@ -24,10 +24,10 @@
     <allow-intent href="itms-apps:*" />
   </platform>
   <platform name="android">
-    <icon src="icon1.png" density="ldpi" />
-    <icon src="icon1.png" density="mdpi" />
-    <icon src="icon1.png" density="hdpi" />
-    <icon src="icon1.png" density="xhdpi" />
+    <icon src="icon2.png" density="ldpi" />
+    <icon src="icon2.png" density="mdpi" />
+    <icon src="icon2.png" density="hdpi" />
+    <icon src="icon2.png" density="xhdpi" />
   </platform>
   <platform name="ios">
     <!-- iOS 8.0+ -->
